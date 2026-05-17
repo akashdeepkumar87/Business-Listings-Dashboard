@@ -1,0 +1,20 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.env
+venv/
+env/
+*.egg-info/
+
+# Node
+node_modules/
+dist/
+.next/
+
+# Data (optional — remove listings.csv line if you want to include the data)
+# listings.csv
+
+# OS
+.DS_Store
+Thumbs.db
