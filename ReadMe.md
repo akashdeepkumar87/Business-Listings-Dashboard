@@ -8,13 +8,11 @@ Built as part of the **Data Science Intern Assignment**.
 
 ## 🌐 Live Deployments
 
-| Layer       | Platform      | URL                           |
-| ----------- | ------------- | ----------------------------- |
-| Frontend    | Vercel        | https://your-app.vercel.app   |
-| Backend API | Render        | https://your-app.onrender.com |
-| Database    | Railway MySQL | Cloud hosted                  |
-
-> Update the URLs above after deploying.
+| Layer       | Platform      | URL                                                    |
+| ----------- | ------------- | ------------------------------------------------------ |
+| Frontend    | Vercel        | https://business-listings-dashboard.vercel.app/        |
+| Backend API | Render        | https://business-listings-dashboard-m00l.onrender.com/ |
+| Database    | Railway MySQL | crossover.proxy.rlwy.net                               |
 
 ---
 
