@@ -28,17 +28,28 @@ from models import (
     PaginatedListingsResponse,
 )
 
+import os
+
 # ─── App Setup ────────────────────────────────────────────────────────────────
 app = FastAPI(
     title="Business Listings Dashboard API",
     version="1.0.0",
-    description="API for the Business Listings Dashboard: internship assignment",
+    description="API for the Business Listings Dashboard — internship assignment",
 )
 
-# Allow React dev server (port 3000 / 5173) to call this API
+# CORS — allow local dev + Vercel production frontend
+# Set ALLOWED_ORIGIN in Render env vars to your Vercel URL e.g. https://bizdash.vercel.app
+_allowed = os.getenv("ALLOWED_ORIGIN", "")
+ORIGINS = [
+    "http://localhost:3000",
+    "http://localhost:5173",
+]
+if _allowed:
+    ORIGINS.append(_allowed)
+
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://localhost:3000", "http://localhost:5173"],
+    allow_origins=ORIGINS,
     allow_methods=["*"],
     allow_headers=["*"],
 )
